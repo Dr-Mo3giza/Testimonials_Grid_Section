@@ -1,0 +1,143 @@
+/* Start Variables */
+:root {
+  --name-color: hsl(0, 0%, 81%);
+  --name-color-alt: hsl(217, 19%, 35%);
+  --grad-color: hsla(0, 0%, 81%, 0.5);
+  --grad-color-alt: hsla(217, 19%, 35%, 0.5);
+  --review-p: hsla(0, 0%, 81%, 0.7);
+  --review-p-alt: hsla(217, 19%, 35%, 0.7);
+}
+
+/* End Variables */
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/* End Global Rules */
+/* Start Desktop Design */
+.page {
+  background-color: hsl(210, 46%, 95%);
+}
+
+.page .container {
+  padding: 200px;
+  display: grid;
+  grid-template-areas: 'dan dan dan dan jon kira'
+    'jean pat pat pat pat kira';
+  gap: 25px;
+}
+
+.page .container .box {
+  padding: 25px 30px;
+  border-radius: 10px;
+}
+
+.page .container .box.dan {
+  grid-area: dan;
+  position: relative;
+  background-color: hsl(263, 55%, 52%);
+}
+
+.page .container .box.dan .quot {
+  position: absolute;
+  right: 85px;
+  top: 0;
+}
+
+.page .container .box.jon {
+  grid-area: jon;
+  background-color: hsl(217, 19%, 35%);
+}
+
+.page .container .box.jean {
+  grid-area: jean;
+  background-color: white;
+}
+
+.page .container .box.pat {
+  grid-area: pat;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.page .container .box.kira {
+  grid-area: kira;
+  background-color: white;
+}
+
+.page .container .box .header {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.page .container .box .header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.page .container .box .header .user span {
+  display: block;
+  font-size: 14px;
+}
+
+.page .container .box .header .user.light-gray span:first-of-type {
+  color: var(--name-color);
+}
+
+.page .container .box .header .user.grayish-blue span:first-of-type {
+  color: var(--name-color-alt);
+}
+
+.page .container .box .header .user.light-gray span:last-of-type {
+  color: var(--grad-color);
+  font-size: 12px;
+}
+
+.page .container .box .header .user.grayish-blue span:last-of-type {
+  color: var(--grad-color-alt);
+  font-size: 12px;
+}
+
+.page .container .box .review {
+  position: relative;
+}
+
+.page .container .box .review p:first-of-type {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.page .container .box .review.light-gray p:first-of-type {
+  color: white;
+}
+
+.page .container .box .review.grayish-blue p:first-of-type {
+  color: var(--name-color-alt);
+}
+
+.page .container .box .review p:last-of-type {
+  font-size: 14px;
+}
+
+.page .container .box .review.light-gray p:last-of-type {
+  color: var(--review-p);
+}
+
+.page .container .box .review.grayish-blue p:last-of-type {
+  color: var(--review-p-alt);
+}
+
+/* End Desktop Design */
